@@ -38,8 +38,6 @@ dependencies {
     implementation("net.kyori:adventure-text-minimessage:4.1.13")
 
     implementation(projects.hyperverseNmsUnsupported)
-    runtimeOnly(project(":hyperverse-nms-1-17", "reobf"))
-    runtimeOnly(project(":hyperverse-nms-1-18", "reobf"))
     runtimeOnly(project(":hyperverse-nms-1-19", "reobf"))
 }
 
@@ -53,8 +51,6 @@ tasks {
     shadowJar {
         minimize {
             exclude(project(":hyperverse-nms-unsupported"))
-            exclude(project(":hyperverse-nms-1-17"))
-            exclude(project(":hyperverse-nms-1-18"))
         }
         mergeServiceFiles()
 
